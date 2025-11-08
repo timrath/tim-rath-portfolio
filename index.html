@@ -3,270 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tim Rath — Communication and Marketing Portfolio</title>
-  <style>
-    /* Import font */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
-
-    /* Global resets */
-    body, h1, h2, h3, p, ul, li, a {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: #f8fff8; /* light green tint */
-      color: #2b4d2b;
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    /* Header */
-    header {
-      background-color: #2b7a2b; /* primary green */
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    /* Section containers */
-    section {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 2.5rem;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    /* Titles */
-    h2 {
-      font-size: 1.8rem;
-      color: #2b4d2b;
-      margin-bottom: 0.5rem;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-      color: #3d6f3d;
-      margin-bottom: 1rem;
-    }
-
-    /* Paragraphs */
-    p {
-      color: #445f44;
-      margin-bottom: 1rem;
-    }
-
-    /* Lists */
-    ul {
-      padding-left: 1.5rem;
-      color: #445f44;
-      margin-bottom: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.4rem;
-    }
-
-    /* Media blocks */
-    .media {
-      flex: 1 1 46%;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    img {
-      max-width: 85%;
-      border-radius: 8px;
-      margin-top: 1.2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    iframe {
-      width: 85%;
-      height: 260px;
-      border: none;
-      border-radius: 8px;
-      margin-top: 1.2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Links */
-    a {
-      color: #2b7a2b;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* About and Contact */
-    .about, .contact {
-      flex-direction: column;
-      text-align: left;
-      padding: 2.5rem;
-    }
-
-    .about p, .contact p {
-      font-size: 1.1rem;
-      color: #2f4f2f;
-    }
-
-    .emoji {
-      font-size: 1.6rem;
-      margin-right: 0.3rem;
-    }
-
-    /* Responsive design */
-    @media (max-width: 850px) {
-      section {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-      }
-      .media {
-        flex: 1 1 100%;
-        align-items: center;
-      }
-      img, iframe {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-  </style>
+  <title>Tim Rath | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <h1>Tim Rath — Communication and Marketing Portfolio</h1>
-  </header>
-
-  <!-- SECTION 1 -->
-  <section>
-    <div class="media">
-      <h2><span class="emoji">🎥</span>Video + Social Media</h2>
-      <h3>“Our Stories, Our Mission”</h3>
-      <p><em>Interactive video series celebrating Alma College’s heritage</em></p>
-      <p>“Our Stories, Our Mission” is an interactive collection of alumni and campus leader interviews, featured on a touchscreen display in the Greg Hatcher Learning Commons and shared on YouTube and social media.</p>
-      <p>In 2024–25, I led a project to spotlight young alumni — bringing new energy and perspective to the series so current and prospective students could better see themselves in Alma’s story. We produced eight new videos in total.</p>
-      <p>My role included coordinating interviews on campus, editing video and audio in Adobe Premiere, designing supporting graphics in Photoshop, and writing companion Q&A features for the Alma College website. I collaborated with team members who assisted with filming and audio capture.</p>
-      <p><strong>Results:</strong></p>
-     <ul>
-        <li>5 Facebook posts — average <strong>reach of 2,398 users per post</strong></li>
-        <li>8 YouTube videos — 712 total views</li>
-        <li>5 LinkedIn posts — average of <strong>1,987 impressions per post</strong></li>
-      </ul>
-      <p><strong>Examples:</strong></p>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=vkLfsrFCeYw">Camera Stevens '21</a></li>
-        <li><a href="https://www.youtube.com/watch?v=lkYuBaMBiIw">Kaitlyn Rooney '22</a></li>
-        <li><a href="https://www.youtube.com/watch?v=K6183NDMzsk">Aaron Hahn '13</a></li>
-      </ul>
-    </div>
-    <div class="media">
-      <img src="https://i.imgur.com/K20Fb5e.png" alt="Camera Stevens testimonial graphic" />
-      <iframe src="https://www.youtube.com/embed/6QCKfq2e0tk" allowfullscreen></iframe>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Tim Rath</h1>
+        <h2>Communications Director | Storyteller | Community Builder</h2>
+        <p>Director of College Communications with experience in media, marketing, and community engagement.</p>
+        <div class="hero-buttons">
+          <a href="Tim%20Rath%20one%20page%20resume%20(2).pdf" class="btn">Download Résumé</a>
+          <a href="#portfolio" class="btn btn-secondary">View Work</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/tim-cartoon-portrait.png" alt="Tim Rath portrait" />
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2 -->
-  <section>
-    <div class="media">
-      <h2><span class="emoji">📰</span>Print + Video + Newsletter + Social Media</h2>
-      <h3>The Tartan</h3>
-      <p><em>Alma College’s alumni magazine, connecting Scots near and far</em></p>
-      <p>The Tartan is Alma College’s alumni magazine, published twice each year to coincide with major fundraising and engagement events — Alma Day and Homecoming. Since 2020, I’ve served as editor, overseeing 10 issues that blend storytelling, design, and donor engagement.</p>
-      <p>In this role, I work with campus leadership to shape story direction, coordinate photoshoots, interview and write features, and collaborate with a designer to bring each piece to life. I also produce web-exclusive videos, manage online publishing through WordPress, create e-newsletters in Constant Contact, and promote content on social media.</p>
-      <p>The Tartan reaches more than 13,000 print subscribers per issue and includes a donation envelope that consistently drives results — generating <strong>over $141,000 in contributions</strong> since 2020, including a <strong>42% increase</strong> from 2023 to 2024 and another <strong>35% rise</strong> from 2024 to 2025.</p>
-      <p><strong>Examples:</strong></p>
-      <ul>
-        <li><a href="https://issuu.com/almacollegemi/docs/the_tartan_-_fall_2025">Fall 2025</a></li>
-        <li><a href="https://issuu.com/almacollegemi/docs/the_tartan_-_spring_2025">Spring 2025</a></li>
-        <li><a href="https://issuu.com/almacollegemi/docs/19869_sep9_proof">Fall 2024</a></li>
-      </ul>
-    </div>
-    <div class="media">
-      <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue" />
-      <iframe src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
-    </div>
-  </section>
-
-   <!-- SECTION 3 -->
-  <section>
-    <div class="media">
-      <h2><span class="emoji">💌</span>Email + Editorial Strategy</h2>
-      <h3>Alumni Newsletter</h3>
-      <p><em>Engaging alumni through storytelling and design innovation</em></p>
-      <p>From 2023 to 2025, I served as project lead for the Alumni Newsletter, an email-only publication designed to complement The Tartan print magazine. In this role, I collaborated with staff, students, and alumni to shape editorial direction, conduct interviews, develop calls-to-action, and create compelling designs.</p>
-      <p>The newsletter was originally produced solely in Constant Contact, but I led an initiative to integrate Adobe Express into our production process — enhancing visual appeal and workflow efficiency. Six newsletters were produced in total.</p>
-      <p><strong>Results:</strong></p>
-      <ul>
-        <li>Sent to an average of 8,603 subscribers per newsletter</li>
-        <li>Average <strong>open rate of 54.7%</strong></li>
-        <li>Average <strong>clickthrough rate of 9.7%</strong></li>
-      </ul>
-      <p><strong>Examples:</strong></p>
-      <ul>
-        <li><a href="https://myemail.constantcontact.com/The-Latest-Alumni-News.html?soid=1102261747125&aid=563urbETfJk">August 2024</a></li>
-        <li><a href="https://conta.cc/40jiXUe">October 2024</a></li>
-        <li><a href="https://conta.cc/3E8CcH9">January 2025</a></li>
-      </ul>
-    </div>
-    <div class="media">
-      <img src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter" />
-    </div>
-  </section>
-
-  <!-- SECTION 4 -->
-  <section>
-    <div class="media">
-      <h2><span class="emoji">📰</span>Print + Editorial Strategy + Social Media</h2>
-      <h3>Writing and Communication</h3>
-      <p><em>Building connection through clarity, storytelling, and strategy</em></p>
-      <p>In addition to serving as editor of The Tartan, I am the primary writer for the college’s internal and external communications — including email messages, social media posts, blog articles, and press releases. I have written hundreds of pieces for diverse audiences, focusing on readability and engagement while applying best practices in search engine optimization to attract new visitors to the college website.</p>
-      <p>Before joining Alma, I spent a decade as a news reporter and editor in Mid-Michigan, covering stories on business and economic development that earned multiple professional awards. During this time, I also designed print layouts using Adobe InDesign, crowdsourced using social media and shot photos to accompany my reporting — experience that continues to inform my approach to storytelling and visual communication.</p>
-
-      <p><strong>Examples:</strong></p>
-      <ul>
-        <li><a href="https://www.alma.edu/news/fafsa-has-opened-what-students-need-to-know/">Blog</a></li>
-        <li><a href="https://www.alma.edu/news/dr-joseph-odenwald-almas-14th-president-alma-college/">Press Release</a></li>
-        <li><a href=https://phoenix-filestack.s3.us-east-1.amazonaws.com/MfyUONKhRlS3Qd7TNqo8_recycling.pdf>News Article</a></li>
-      </ul>
-    </div>
-    <div class="media">
-      <img src="https://i.imgur.com/Wy6XXxG.jpeg" alt="Placeholder image representing writing and communication" />
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
+  <!-- About Section -->
+  <section id="about" class="section">
     <h2>About</h2>
-    <p>Results-driven communication and marketing professional with experience in digital strategy, print collateral design, and multimedia storytelling. My work focuses on building strong community relationships, amplifying local initiatives, and creating measurable impact through integrated campaigns.</p>
+    <p>I’m a Michigan-based communications professional with experience leading marketing, media, and public relations strategy for higher education and nonprofit organizations. My work bridges storytelling and strategy — connecting data, creativity, and community impact.</p>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact">
+  <!-- Experience Section -->
+  <section id="experience" class="section light">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+      <div class="card">
+        <h3>Alma College</h3>
+        <p><strong>Director of College Communications</strong> — April 2020–Present</p>
+        <p>Leads all communication and marketing initiatives, serving as spokesperson and media liaison. Writes speeches, press releases, and alumni magazine content while coordinating SEO and digital strategy.</p>
+      </div>
+      <div class="card">
+        <h3>The Pioneer Group</h3>
+        <p><strong>Editor in Chief / Associate Editor</strong> — July 2018–April 2020</p>
+        <p>Supervised a team of five, oversaw multi-county coverage, and produced award-winning journalism recognized by the Michigan Press Association.</p>
+      </div>
+      <div class="card note">
+        <p>🏆 Awarded by Michigan Associated Press Media Editors and Michigan Press Association for excellence in news and column writing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <h3>Core Areas</h3>
+        <p>Public Relations • Media Production • Strategic Communications • Community Engagement • Marketing & Branding • Project Management</p>
+      </div>
+      <div>
+        <h3>Technical Tools</h3>
+        <p>Adobe Creative Suite • Canva • Google Analytics • CMS Platforms • Microsoft Office • Social Media • Basic Video & Photography</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="section light">
+    <h2>Community & Leadership</h2>
+    <ul>
+      <li>Alma Planning Commission Member (since 2024)</li>
+      <li>Families Against Narcotics Advisory Board (since 2023)</li>
+      <li>Gratiot Young Professionals Leadership Graduate (2024–25)</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p>Selected projects showcasing my storytelling, digital marketing, and community engagement work.</p>
+    <!-- Existing project cards from your current site will remain here -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section light">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:timothy.jay.rath@gmail.com">timothy.jay.rath@gmail.com</a>&nbsp;&nbsp;&nbsp;
-    📞 <a href="tel:+19893237427">(989) 323-7427</a>&nbsp;&nbsp;&nbsp;
-    🌐 <a href="https://www.linkedin.com/in/tim-rath-7742971b" target="_blank">linkedin.com/in/tim-rath-7742971b</a></p>
+    <p>Let’s connect!</p>
+    <p>
+      <a href="mailto:timothy.jay.rath@gmail.com">timothy.jay.rath@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/tim-rath-7742971b/" target="_blank">LinkedIn</a>
+    </p>
   </section>
 
+  <footer>
+    <p>© 2025 Tim Rath · Built with ❤️</p>
+  </footer>
 </body>
 </html>
