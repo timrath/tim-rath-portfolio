@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tim Rath — Communication and Marketing Portfolio</title>
+<title>Tim Rath</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 body {
-  background-color: #f8fff8;
-  color: #2b4d2b;
+  background-color: #f5f5f7;
+  color: #2d2d2d;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -17,15 +17,47 @@ body {
 
 /* Header */
 header {
-  background-color: #2b7a2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
   color: white;
-  text-align: center;
-  padding: 3rem 2rem;
+  padding: 2rem 2.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 header h1 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin: 0;
+  text-align: left;
+}
+header .contact-bar {
+  text-align: right;
+  font-size: 0.9rem;
+}
+header .contact-bar a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+header .contact-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+section h2 {
+  font-size: 1.6rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+section p {
+  color: #374151;
 }
 
 /* Projects grid */
@@ -54,29 +86,20 @@ header h1 {
 
 .project-box h2 {
   font-size: 1.3rem;
-  color: #2b4d2b;
+  color: #1f2937;
   margin-bottom: 0.3rem;
 }
 .project-box h3 {
   font-size: 1.1rem;
-  color: #3d6f3d;
+  color: #374151;
   margin-bottom: 0.6rem;
 }
-.project-box p {
-  font-size: 0.95rem;
-  color: #445f44;
-  margin-bottom: 0.5rem;
-}
+.project-box p,
 .project-box ul {
-  padding-left: 1.3rem;
-  margin: 0.5rem 0;
-  color: #445f44;
-}
-.project-box li {
-  margin-bottom: 0.3rem;
+  color: #4b5563;
 }
 .project-box a {
-  color: #2b7a2b;
+  color: #2563eb;
   text-decoration: none;
   font-weight: 500;
 }
@@ -97,28 +120,19 @@ header h1 {
   height: 180px;
 }
 
-/* About, Resume, Contact */
-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-}
-section h2 {
-  font-size: 1.6rem;
-  color: #2b4d2b;
-  margin-bottom: 1rem;
-}
-section p {
-  color: #2f4f2f;
-}
-
 /* Responsive */
 @media (max-width: 600px) {
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .contact-bar {
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 </style>
@@ -126,10 +140,33 @@ section p {
 <body>
 
 <header>
-  <h1>Tim Rath — Communication and Marketing Portfolio</h1>
+  <h1>Tim Rath</h1>
+  <div class="contact-bar">
+    <a href="mailto:timothy.jay.rath@gmail.com">timothy.jay.rath@gmail.com</a><br>
+    <a href="tel:+19893237427">(989) 323-7427</a><br>
+    <a href="https://www.linkedin.com/in/tim-rath-7742971b" target="_blank">LinkedIn</a>
+  </div>
 </header>
 
-<!-- PROJECTS GRID -->
+<!-- ABOUT FIRST -->
+<section class="about">
+  <h2>About</h2>
+  <p>Results-driven communication and marketing professional with experience in digital strategy, print design, and multimedia storytelling. My work focuses on building strong community relationships, amplifying local initiatives, and creating measurable impact through integrated campaigns.</p>
+</section>
+
+<!-- RESUME NEXT -->
+<section id="resume">
+  <h2>Résumé Highlights</h2>
+  <p><strong>Core Skills:</strong> Strategic communication, multimedia storytelling, digital marketing, editorial leadership, analytics-driven engagement.</p>
+  <ul>
+    <li>Editor, The Tartan Alumni Magazine (2020–Present)</li>
+    <li>Project Lead, Alumni Newsletter (2023–2025)</li>
+    <li>Video Producer and Writer, “Our Stories, Our Mission”</li>
+    <li>10+ years experience in journalism and higher education marketing</li>
+  </ul>
+</section>
+
+<!-- PORTFOLIO LAST -->
 <div class="projects">
   <div class="project-box">
     <h2>🎥 Video + Social Media</h2>
@@ -176,32 +213,6 @@ section p {
     </div>
   </div>
 </div>
-
-<!-- RESUME SECTION -->
-<section id="resume">
-  <h2>Résumé Highlights</h2>
-  <p><strong>Core Skills:</strong> Strategic communication, multimedia storytelling, digital marketing, editorial leadership, analytics-driven engagement.</p>
-  <ul>
-    <li>Editor, The Tartan Alumni Magazine (2020–Present)</li>
-    <li>Project Lead, Alumni Newsletter (2023–2025)</li>
-    <li>Video Producer and Writer, “Our Stories, Our Mission”</li>
-    <li>10+ years experience in journalism and higher education marketing</li>
-  </ul>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-  <h2>About</h2>
-  <p>Results-driven communication and marketing professional with experience in digital strategy, print design, and multimedia storytelling. My work focuses on building strong community relationships, amplifying local initiatives, and creating measurable impact through integrated campaigns.</p>
-</section>
-
-<!-- CONTACT -->
-<section class="contact">
-  <h2>Contact</h2>
-  <p>📧 <a href="mailto:timothy.jay.rath@gmail.com">timothy.jay.rath@gmail.com</a><br>
-     📞 <a href="tel:+19893237427">(989) 323-7427</a><br>
-     🌐 <a href="https://www.linkedin.com/in/tim-rath-7742971b" target="_blank">linkedin.com/in/tim-rath-7742971b</a></p>
-</section>
 
 </body>
 </html>
