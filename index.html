@@ -148,11 +148,18 @@ section p {
   height: 170px;
 }
 
-/* ===== NEW ADDITION (ONLY CHANGE #1) ===== */
+/* ===== CHANGE #1: Adjusted Strong Video Height ===== */
 .match-height {
-  height: 210px !important; /* Adjust as needed */
+  height: 204px !important;
 }
-/* ======================================= */
+/* ================================================ */
+
+/* ===== CHANGE #2: Top Newsletter Image Height ===== */
+.newsletter-align {
+  height: 260px !important;
+  object-fit: cover; /* Keeps proportions visually clean */
+}
+/* ================================================= */
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -270,9 +277,8 @@ section p {
     <div class="project-media">
       <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
 
-      <!-- ===== CHANGE #2: CLASS ADDED HERE ===== -->
+      <!-- Strong Female Leadership video -->
       <iframe class="match-height" src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
-      <!-- ======================================== -->
 
     </div>
   </div>
@@ -301,7 +307,8 @@ section p {
     </ul>
 
     <div class="project-media">
-      <img src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter"/>
+      <!-- TOP NEWSLETTER IMAGE — CHANGE #2 -->
+      <img class="newsletter-align" src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter"/>
     </div>
   </div>
 
