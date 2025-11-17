@@ -148,6 +148,12 @@ section p {
   height: 170px;
 }
 
+/* ===== NEW ADDITION (ONLY CHANGE #1) ===== */
+.match-height {
+  height: 210px !important; /* Adjust as needed */
+}
+/* ======================================= */
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   header {
@@ -263,7 +269,11 @@ section p {
 
     <div class="project-media">
       <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
-      <iframe src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
+
+      <!-- ===== CHANGE #2: CLASS ADDED HERE ===== -->
+      <iframe class="match-height" src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
+      <!-- ======================================== -->
+
     </div>
   </div>
 
