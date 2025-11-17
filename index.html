@@ -8,7 +8,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-/* Global */
 body {
   background-color: #f5f5f7;
   color: #2d2d2d;
@@ -25,7 +24,7 @@ header {
   background-color: #1f2937;
   color: white;
   padding: 2rem 2.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 header h1 {
   font-size: 2rem;
@@ -43,44 +42,60 @@ header .contact-bar a:hover {
   text-decoration: underline;
 }
 
-/* --- Section Blocks (Tight & Modern) --- */
+/* Main sections */
 section {
   max-width: 900px;
-  margin: 1.5rem auto;
+  margin: 2rem auto;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding: 2rem;
 }
 section h2 {
   font-size: 1.6rem;
   color: #1f2937;
-  margin: 0 0 0.8rem 0;
+  margin-bottom: 1rem;
 }
 section p {
   color: #374151;
-  margin: 0.6rem 0;
 }
 
-/* --- Projects Grid --- */
+/* Portfolio divider bar */
+.portfolio-divider {
+  max-width: 1100px;
+  margin: 2rem auto 1rem;
+  background-color: #1f4e8c;
+  padding: 0.9rem 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.portfolio-divider h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Portfolio grid */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5rem;
   max-width: 1100px;
-  margin: 1.5rem auto 2.5rem;
+  margin: 1rem auto 3rem;
   padding: 0 1rem;
 }
 
-/* --- Project Cards --- */
+/* Project cards */
 .project-box {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  padding: 1.6rem 1.75rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
   transition: transform 0.2s ease;
 }
 .project-box:hover {
@@ -88,61 +103,68 @@ section p {
 }
 
 .project-box h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #1f2937;
-  margin: 0 0 0.25rem 0;
+  margin-bottom: 0.4rem;
 }
 .project-box h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #374151;
-  margin: 0.2rem 0 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
-/* paragraphs in project box */
+/* Clean spacing for paragraphs + lists */
 .project-box p {
-  margin: 0.45rem 0;
+  margin: 0.35rem 0;
   line-height: 1.45;
 }
-
-/* lists */
 .project-box ul {
-  margin: 0.2rem 0 0.6rem 1.2rem;
-  padding-left: 1.0rem;
+  margin: 0.35rem 0 1rem 1.2rem;
+  padding-left: 1.2rem;
 }
-.project-box ul li {
-  margin-bottom: 0.2rem;
+.project-box li {
+  margin-bottom: 0.25rem;
 }
 
-/* media */
+.project-box a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project-box a:hover {
+  text-decoration: underline;
+}
+
+/* Media */
 .project-media img,
 .project-media iframe {
   width: 85%;
-  max-width: 480px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin: 0.7rem auto 0;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .project-media iframe {
-  height: 165px;
+  height: 170px;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 600px) {
-  .projects {
-    grid-template-columns: 1fr;
-  }
   header {
     flex-direction: column;
     text-align: center;
   }
-  header .contact-bar {
+  .contact-bar {
     margin-top: 1rem;
-    text-align: center;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
@@ -182,10 +204,15 @@ section p {
   <p><strong>Additional Skills & Recognition:</strong> FOIA proficiency; Microsoft Office; Constant Contact; WordPress; Asana; social media platforms. Google Analytics 4 certified. Award-winning journalist (Michigan Press Association, Michigan Associated Press Media Editors). Gratiot Young Professionals Network Leadership Development graduate (2024–25).</p>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO DIVIDER BAR -->
+<div class="portfolio-divider">
+  <h2>Portfolio</h2>
+</div>
+
+<!-- PORTFOLIO GRID -->
 <div class="projects">
 
-  <!-- Project 1 -->
+  <!-- VIDEO + SOCIAL -->
   <div class="project-box">
     <h2>🎥 Video + Social Media</h2>
     <h3>“Our Stories, Our Mission”</h3>
@@ -211,12 +238,12 @@ section p {
     </ul>
 
     <div class="project-media">
-      <img src="https://i.imgur.com/K20Fb5e.png" alt="Camera Stevens testimonial graphic" />
+      <img src="https://i.imgur.com/K20Fb5e.png" alt="Camera Stevens testimonial graphic"/>
       <iframe src="https://www.youtube.com/embed/6QCKfq2e0tk" allowfullscreen></iframe>
     </div>
   </div>
 
-  <!-- Project 2 -->
+  <!-- THE TARTAN -->
   <div class="project-box">
     <h2>📰 Print + Video + Social</h2>
     <h3>The Tartan</h3>
@@ -235,12 +262,12 @@ section p {
     </ul>
 
     <div class="project-media">
-      <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue" />
+      <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
       <iframe src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
     </div>
   </div>
 
-  <!-- Project 3 -->
+  <!-- ALUMNI NEWSLETTER -->
   <div class="project-box">
     <h2>💌 Email + Editorial Strategy</h2>
     <h3>Alumni Newsletter</h3>
@@ -264,11 +291,11 @@ section p {
     </ul>
 
     <div class="project-media">
-      <img src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter" />
+      <img src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter"/>
     </div>
   </div>
 
-  <!-- Project 4 -->
+  <!-- WRITING & COMMUNICATION -->
   <div class="project-box">
     <h2>📰 Print + Editorial Strategy</h2>
     <h3>Writing and Communication</h3>
@@ -285,7 +312,7 @@ section p {
     </ul>
 
     <div class="project-media">
-      <img src="https://i.imgur.com/Wy6XXxG.jpeg" alt="Writing and communication" />
+      <img src="https://i.imgur.com/Wy6XXxG.jpeg" alt="Writing and communication"/>
     </div>
   </div>
 
