@@ -1,320 +1,349 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tim Rath — Portfolio</title>
-  <meta name="description" content="Tim Rath — communications, storytelling, digital strategy. Portfolio of work." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;
-      --muted:#6b7280;
-      --accent:#0b5fff; /* replace with your blue if desired */
-      --card:#ffffff;
-      --glass: rgba(11,95,255,0.06);
-      --radius:14px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:var(--bg);color:#111827}
-    a{color:inherit;text-decoration:none}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hello! My name is Tim Rath.</title>
 
-    /* ---------- LAYOUT ---------- */
-    .site{max-width:1100px;margin:0 auto;padding:36px 20px 80px}
-    header{position:sticky;top:12px;z-index:40;background:transparent;padding:6px 0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6c9cff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-    .nav-links{display:flex;gap:14px;align-items:center}
-    .btn{padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff;border:0}
-    .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-    /* ---------- HERO ---------- */
-    .hero{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;padding:48px 0}
-    .intro h1{font-size:clamp(28px,4.6vw,44px);margin:0 0 10px}
-    .intro p{margin:0;color:var(--muted);line-height:1.6}
-    .hero-ctas{margin-top:12px;display:flex;gap:12px}
+body {
+  background-color: #f5f5f7;
+  color: #2d2d2d;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.55;
+  margin: 0;
+}
 
-    /* ---------- PROJECT GRID ---------- */
-    .section-title{display:flex;align-items:center;gap:12px;margin:48px 0 18px}
-    .section-title h2{margin:0;font-size:20px}
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  color: white;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+header .contact-bar {
+  text-align: right;
+  font-size: 0.9rem;
+}
+header .contact-bar a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+header .contact-bar a:hover {
+  text-decoration: underline;
+}
 
-    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(15,23,42,0.04);display:flex;flex-direction:column;gap:12px;transition:transform .22s ease,box-shadow .22s ease}
-    .card:focus-within,.card:hover{transform:translateY(-6px);box-shadow:0 18px 30px rgba(15,23,42,0.06)}
-    .thumb{width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#f3f4f6;display:block}
-    .meta{display:flex;flex-direction:column;gap:6px}
-    .title{font-weight:600}
-    .desc{font-size:14px;color:var(--muted)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600}
+/* Main sections */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+section h2 {
+  font-size: 1.6rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+section p {
+  color: #374151;
+}
 
-    /* ---------- ABOUT / CONTACT ---------- */
-    .split{display:grid;grid-template-columns:1fr;gap:18px}
-    .about-card{padding:18px;border-radius:12px;background:#fbfbfd;border:1px solid rgba(0,0,0,0.02)}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .skill{background:transparent;padding:6px 8px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);font-weight:600;font-size:13px}
+/* ===== About section image styling ===== */
+.about-photo {
+  float: right;
+  width: 180px;
+  height: 240px;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 
-    /* ---------- FOOTER ---------- */
-    footer{margin-top:50px;padding:40px 0 60px;color:var(--muted)}
+/* Portfolio divider bar */
+.portfolio-divider {
+  max-width: 1100px;
+  margin: 2rem auto 1rem;
+  background-color: #1f2937;
+  padding: 0.9rem 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.portfolio-divider h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
 
-    /* ---------- MODAL / PROJECT DETAIL ---------- */
-    .overlay{position:fixed;inset:0;display:none;align-items:flex-start;justify-content:center;padding:60px;z-index:200}
-    .overlay.open{display:flex;background:rgba(8,8,8,0.45)}
-    .modal{background:#fff;border-radius:12px;max-width:920px;width:100%;max-height:86vh;overflow:auto;padding:22px 22px 40px}
-    .modal h3{margin-top:0}
-    .modal .stats{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+/* Portfolio grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 1rem auto 3rem;
+  padding: 0 1rem;
+}
 
-    /* ---------- SMALL SCREENS ---------- */
-    @media (min-width:880px){
-      .hero{grid-template-columns:1fr 380px}
-      .split{grid-template-columns:1fr 360px}
-    }
+/* Project cards */
+.project-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.project-box:hover {
+  transform: translateY(-4px);
+}
 
-    /* accessible focus styles */
-    a:focus,.btn:focus,.card:focus{outline:3px solid rgba(11,95,255,0.12);outline-offset:3px}
+.project-box h2 {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 0.4rem;
+}
+.project-box h3 {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 0.6rem;
+}
 
-    /* utility */
-    .muted{color:var(--muted)}
-    .center{display:flex;align-items:center;justify-content:center}
-  </style>
+/* Clean spacing for paragraphs + lists */
+.project-box p {
+  margin: 0.35rem 0;
+  line-height: 1.45;
+}
+.project-box ul {
+  margin: 0.35rem 0 1rem 1.2rem;
+  padding-left: 1.2rem;
+}
+.project-box li {
+  margin-bottom: 0.25rem;
+}
+
+.project-box a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project-box a:hover {
+  text-decoration: underline;
+}
+
+/* Media */
+.project-media img,
+.project-media iframe {
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.project-media iframe {
+  height: 170px;
+}
+
+/* ===== NEW ADDITION (ONLY CHANGE #1) ===== */
+.match-height {
+  height: 210px !important; /* Adjust as needed */
+}
+/* ======================================= */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-bar {
+    margin-top: 1rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .about-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 140px;
+    height: 180px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="site" id="top">
-    <header aria-label="Main navigation">
-      <nav class="nav" role="navigation">
-        <div class="brand">
-          <div class="logo" aria-hidden>TR</div>
-          <div>
-            <div style="font-weight:700">Tim Rath</div>
-            <div style="font-size:13px;color:var(--muted)">Communications • Storytelling • Digital Strategy</div>
-          </div>
-        </div>
-        <div class="nav-links">
-          <a class="muted" href="#work">Work</a>
-          <a class="muted" href="#about">About</a>
-          <a class="muted" href="#contact">Contact</a>
-          <a class="btn btn-primary" href="#work">View Work</a>
-        </div>
-      </nav>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="intro-title">
-      <div class="intro">
-        <h1 id="intro-title">Hi — I’m Tim Rath.</h1>
-        <p>I craft clear, human-centered stories for colleges, communities, and digital audiences. I lead writing, video, and strategic campaigns that connect institutions to the people they serve.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="#work">See case studies</a>
-          <a class="btn btn-ghost" href="#contact">Say hello</a>
-        </div>
-      </div>
-
-      <aside class="center" aria-hidden>
-        <!-- small spotlight / quick stats or headshot -->
-        <div style="width:100%;max-width:320px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbff);box-shadow:0 8px 24px rgba(13,24,40,0.04);text-align:center">
-          <div style="width:88px;height:88px;border-radius:12px;margin:0 auto 12px;background:#e9eefc;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)">TR</div>
-          <div style="font-weight:700">Available for freelance & consulting</div>
-          <div class="muted" style="margin-top:8px;font-size:14px">Focused on higher ed, nonprofits, and community storytelling.</div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="work">
-      <div class="section-title"><h2>Selected Work</h2></div>
-      <div class="projects" role="list">
-
-        <!-- Repeat these .card blocks for each project. Replace images, titles, and descriptions. -->
-        <article class="card" role="listitem">
-          <button class="thumb" data-project='{"title":"Alma College Alumni Video","role":"Writer & Producer","skills":"Video, Editing, Strategy","timeline":"2025","outcome":"2,300 views; increased alumni engagement"}' aria-label="Open case study: Alma College Alumni Video"></button>
-          <div class="meta">
-            <div class="title">Alma College Alumni Video</div>
-            <div class="desc">Short documentary-style video showcasing alumni stories and impact.</div>
-            <div class="tags"><span class="tag">Video</span><span class="tag">Storytelling</span></div>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <button class="thumb" data-project='{"title":"Community Newsletter Redesign","role":"Lead Writer","skills":"Newsletter, Design, Strategy","timeline":"2024","outcome":"open rates +18%"}' aria-label="Open case study: Community Newsletter Redesign"></button>
-          <div class="meta">
-            <div class="title">Community Newsletter Redesign</div>
-            <div class="desc">Redesigned alumni newsletter to boost readability and engagement.</div>
-            <div class="tags"><span class="tag">Writing</span><span class="tag">Email</span></div>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <button class="thumb" data-project='{"title":"Student Recruitment Campaign","role":"Digital Strategist","skills":"Campaigns, Analytics","timeline":"2023","outcome":"application lift 7%"}' aria-label="Open case study: Student Recruitment Campaign"></button>
-          <div class="meta">
-            <div class="title">Student Recruitment Campaign</div>
-            <div class="desc">Multichannel campaign combining social, email, and landing page copy.</div>
-            <div class="tags"><span class="tag">Strategy</span><span class="tag">Copy</span></div>
-          </div>
-        </article>
-
-        <!-- placeholder card to show grid behavior -->
-        <article class="card" role="listitem">
-          <button class="thumb" data-project='{"title":"Sample Project","role":"Writer","skills":"Design, Writing","timeline":"2022","outcome":"qualitative feedback"}' aria-label="Open case study: Sample Project"></button>
-          <div class="meta">
-            <div class="title">Sample Project</div>
-            <div class="desc">A compact project entry; swap this with your real project thumbnail and copy.</div>
-            <div class="tags"><span class="tag">Copy</span><span class="tag">Design</span></div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ABOUT + CONTACT -->
-    <section id="about" style="margin-top:36px">
-      <div class="section-title"><h2>About</h2></div>
-      <div class="split">
-        <div class="about-card">
-          <p style="margin:0 0 12px;font-weight:600">I’m a communications and marketing professional with 15 years of experience across higher education and news media. I specialize in digital storytelling —bringing together writing, strategy, multimedia, and community engagement to create work that resonates.</p>
-          <p class="muted" style="margin:0 0 10px">I live in Alma, Michigan, and I’m actively involved in community storytelling projects and alumni outreach.</p>
-
-          <div style="font-weight:700;margin-top:12px">Skills snapshot</div>
-          <div class="skills">
-            <div class="skill">Writing & Editing</div>
-            <div class="skill">Digital Strategy</div>
-            <div class="skill">Video Production</div>
-            <div class="skill">UX Research</div>
-            <div class="skill">Content Management</div>
-          </div>
-        </div>
-
-        <aside style="align-self:start;padding-left:8px">
-          <div class="about-card" style="text-align:left">
-            <div style="font-weight:700">Quick facts</div>
-            <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
-              <li>Based in Alma, MI</li>
-              <li>15 years in comms & media</li>
-              <li>Available for freelance & consulting</li>
-            </ul>
-            <div style="margin-top:12px">
-              <a class="btn btn-primary" href="#contact">Hire / Consult</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" style="margin-top:48px">
-      <div class="section-title"><h2>Contact</h2></div>
-      <div class="about-card">
-        <p style="margin:0 0 12px">Interested in working together? Drop me a note.</p>
-        <p style="margin:0 0 8px"><strong>Email:</strong> <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
-        <p style="margin:0 0 8px"><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a></p>
-        <p style="margin:0">GitHub: <a href="https://github.com/timrath">github.com/timrath</a></p>
-      </div>
-    </section>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div class="muted">© <span id="year"></span> Tim Rath — All rights reserved.</div>
-        <div class="muted">Built with HTML, CSS & a little JavaScript — optimized for clarity.</div>
-      </div>
-    </footer>
+<header>
+  <h1>Hello! My name is Tim Rath.</h1>
+  <div class="contact-bar">
+    <a href="mailto:timothy.jay.rath@gmail.com">timothy.jay.rath@gmail.com</a><br>
+    <a href="tel:+19893237427">(989) 323-7427</a><br>
+    <a href="https://www.linkedin.com/in/tim-rath-7742971b" target="_blank">LinkedIn</a>
   </div>
+</header>
 
-  <!-- PROJECT MODAL -->
-  <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal" role="document">
-      <button id="closeModal" aria-label="Close project detail" style="float:right;border:0;background:transparent;font-size:18px;cursor:pointer">✕</button>
-      <div id="modalContent">
-        <!-- Filled by JS -->
-      </div>
+<!-- ABOUT -->
+<section class="about">
+  <h2>About</h2>
+  <img class="about-photo" src="https://i.imgur.com/beS8fex.png" alt="Tim Rath mugshot" />
+  <p>I am a versatile communications and marketing professional with 15 years of experience spanning higher education and news media environments. I have a proven track record of leading complex projects that combine storytelling, digital strategy, and public relations to support publications, website initiatives, social media, and internal communications.</p>
+  <p>Beyond my professional work, I am actively engaged in my community in Alma, Michigan, where I live with my wife, Autumn, and our two cats. I serve on the Alma Planning Commission and the advisory board of Families Against Narcotics, contributing to local initiatives that strengthen our community. In my free time, I enjoy baking, cooking, watching movies and sports, and writing — pursuits that allow me to blend creativity with attention to detail, both personally and professionally. I bring the same creativity, attention to detail, and passion for storytelling to my work, and I look forward to crafting communications that resonate and connect with diverse audiences.</p>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <h2>Résumé Highlights</h2>
+
+  <p><strong>Areas of Expertise:</strong> Public relations, project management, social media management, media relations, crisis communications, Google Analytics, marketing strategy, SEO-informed content planning, and news/feature writing.</p>
+
+  <ul>
+    <li><strong>Director of College Communications, Alma College (2020–Present)</strong><br>
+    Primary spokesperson and media liaison; lead writer for internal and external communications including email, press releases, blogs, and social media. Oversee production of The Tartan alumni magazine (circ. 13,000) and multiple e-newsletters. Coordinate communication strategy, crisis messaging, and media engagement. Occasional video production and editing.</li>
+
+    <li><strong>Editor in Chief / Associate Editor, The Pioneer Group (2018–2020)</strong><br>
+    Supervised a team of five journalists and freelance contributors. Reported, photographed, and edited stories for a daily newspaper (circ. 5,500) and multiple weekly publications. Led digital content strategy and social media management for all brand platforms.</li>
+
+    <li><strong>Prior Journalism & Nonprofit Experience</strong><br>
+    Roles with The Argus-Press, Patch.com, Booth Newspapers, and organizations including LifePortal and the Karikuy Organization. Experience in reporting, editing, digital content management, and nonprofit communications.</li>
+  </ul>
+
+  <p><strong>Education:</strong> B.A. in Journalism, Oakland University (2009). Minor in political science. Former sports editor and managing web editor at <em>The Oakland Post</em>. Participant, British Studies at Oxford (2009).</p>
+
+  <p><strong>Additional Skills & Recognition:</strong> FOIA proficiency; Microsoft Office; Constant Contact; WordPress; Asana; social media platforms. Google Analytics 4 certified. Award-winning journalist (Michigan Press Association, Michigan Associated Press Media Editors). Gratiot Young Professionals Network Leadership Development graduate (2024–25).</p>
+</section>
+
+<!-- PORTFOLIO DIVIDER BAR -->
+<div class="portfolio-divider">
+  <h2>Portfolio</h2>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<div class="projects">
+
+  <!-- VIDEO + SOCIAL -->
+  <div class="project-box">
+    <h2>🎥 Video + Social Media</h2>
+    <h3>“Our Stories, Our Mission”</h3>
+
+    <p>“Our Stories, Our Mission” is an interactive collection of alumni and campus leader interviews, featured on a touchscreen display in the Greg Hatcher Learning Commons and shared on YouTube and social media.</p>
+
+    <p>In 2024–25, I led a project to spotlight young alumni — bringing new energy and perspective to the series so current and prospective students could better see themselves in Alma’s story. We produced eight new videos in total.</p>
+
+    <p>My role included coordinating interviews on campus, editing video and audio in Adobe Premiere, designing supporting graphics in Photoshop, and writing companion Q&A features for the Alma College website. I collaborated with team members who assisted with filming and audio capture.</p>
+
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li>5 Facebook posts — average <strong>reach of 2,398 users per post</strong></li>
+      <li>8 YouTube videos — 712 total views</li>
+      <li>5 LinkedIn posts — average of <strong>1,987 impressions per post</strong></li>
+    </ul>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=vkLfsrFCeYw">Camera Stevens '21</a></li>
+      <li><a href="https://www.youtube.com/watch?v=lkYuBaMBiIw">Kaitlyn Rooney '22</a></li>
+      <li><a href="https://www.youtube.com/watch?v=K6183NDMzsk">Aaron Hahn '13</a></li>
+    </ul>
+
+    <div class="project-media">
+      <img src="https://i.imgur.com/K20Fb5e.png" alt="Camera Stevens testimonial graphic"/>
+      <iframe src="https://www.youtube.com/embed/6QCKfq2e0tk" allowfullscreen></iframe>
     </div>
   </div>
 
-  <script>
-    // small helpers
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- THE TARTAN -->
+  <div class="project-box">
+    <h2>📰 Print + Video + Social</h2>
+    <h3>The Tartan</h3>
 
-    // smooth scroll for in-page links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        const href=a.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
-          history.replaceState(null,'',href);
-        }
-      })
-    })
+    <p>The Tartan is Alma College’s alumni magazine, published twice each year to coincide with major fundraising and engagement events — Alma Day and Homecoming. Since 2020, I’ve served as editor, overseeing 10 issues that blend storytelling, design, and donor engagement.</p>
 
-    // project modal behavior
-    const overlay = document.getElementById('overlay');
-    const modalContent = document.getElementById('modalContent');
-    const closeModal = document.getElementById('closeModal');
+    <p>In this role, I work with campus leadership to shape story direction, coordinate photoshoots, interview and write features, and collaborate with a designer to bring each piece to life. I also produce web-exclusive videos, manage online publishing through WordPress, create e-newsletters in Constant Contact, and promote content on social media.</p>
 
-    function openProject(data){
-      // data is an object with title, role, skills, timeline, outcome
-      overlay.classList.add('open');
-      overlay.setAttribute('aria-hidden','false');
-      modalContent.innerHTML = `
-        <h3>${escapeHtml(data.title)}</h3>
-        <div class="stats">
-          <div><strong>Role:</strong> ${escapeHtml(data.role)}</div>
-          <div><strong>Skills:</strong> ${escapeHtml(data.skills)}</div>
-          <div><strong>Timeline:</strong> ${escapeHtml(data.timeline)}</div>
-          <div><strong>Outcome:</strong> ${escapeHtml(data.outcome)}</div>
-        </div>
-        <p style="margin-top:12px;color:var(--muted)">Problem — a short problem statement explaining the challenge the project solved. Replace this text with your real case study content.</p>
-        <h4 style="margin-top:14px">Approach</h4>
-        <p class="muted">Summarize your approach: research, copy, production, channels, etc. Add images and embeds below.</p>
-        <div style="margin-top:14px">
-          <img src="https://via.placeholder.com/1000x500?text=Project+image" alt="Project sample image" style="width:100%;border-radius:8px"/>
-        </div>
-        <h4 style="margin-top:18px">Impact</h4>
-        <p class="muted">Outcome description: include metrics or qualitative impacts.</p>
-      `;
-      // trap focus
-      closeModal.focus();
-    }
+    <p>The Tartan reaches more than 13,000 print subscribers per issue and includes a donation envelope that consistently drives results — generating <strong>over $141,000 in contributions</strong> since 2020, including a <strong>42% increase</strong> from 2023 to 2024 and another <strong>35% rise</strong> from 2024 to 2025.</p>
 
-    function closeProject(){
-      overlay.classList.remove('open');
-      overlay.setAttribute('aria-hidden','true');
-      modalContent.innerHTML='';
-    }
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><a href="https://issuu.com/almacollegemi/docs/the_tartan_-_fall_2025">Fall 2025</a></li>
+      <li><a href="https://issuu.com/almacollegemi/docs/the_tartan_-_spring_2025">Spring 2025</a></li>
+      <li><a href="https://issuu.com/almacollegemi/docs/19869_sep9_proof">Fall 2024</a></li>
+    </ul>
 
-    // escape helper to avoid injection when values are set by data attributes
-    function escapeHtml(s){
-      if(!s) return '';
-      return String(s).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m] });
-    }
+    <div class="project-media">
+      <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
+      <iframe class="match-height" src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
+    </div>
+  </div>
 
-    // hook up project buttons
-    document.querySelectorAll('.thumb').forEach(btn=>{
-      btn.addEventListener('click',e=>{
-        const raw = btn.getAttribute('data-project');
-        try{ const data = JSON.parse(raw); openProject(data);}catch(err){console.error(err)}
-      })
-      // keyboard support
-      btn.addEventListener('keydown',e=>{ if(e.key==='Enter' || e.key===' ') {e.preventDefault(); btn.click()} })
-    })
+  <!-- ALUMNI NEWSLETTER -->
+  <div class="project-box">
+    <h2>💌 Email + Editorial Strategy</h2>
+    <h3>Alumni Newsletter</h3>
 
-    closeModal.addEventListener('click',closeProject);
-    overlay.addEventListener('click',(e)=>{ if(e.target===overlay) closeProject(); });
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProject(); });
+    <p>From 2023 to 2025, I served as project lead for the Alumni Newsletter, an email-only publication designed to complement The Tartan print magazine. In this role, I collaborated with staff, students, and alumni to shape editorial direction, conduct interviews, develop calls-to-action, and create compelling designs.</p>
 
-    // Lazy-loading: if you add <img loading="lazy"> in cards, browser will do the rest. Cards use background placeholders; replace with <img> elements as needed.
+    <p>The newsletter was originally produced solely in Constant Contact, but I led an initiative to integrate Adobe Express into our production process — enhancing visual appeal and workflow efficiency. Six newsletters were produced in total.</p>
 
-  </script>
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li>Sent to an average of 8,603 subscribers per newsletter</li>
+      <li>Average <strong>open rate of 54.7%</strong></li>
+      <li>Average <strong>clickthrough rate of 9.7%</strong></li>
+    </ul>
 
-  <!-- Implementation notes (remove after customizing):
-       - Replace the .thumb buttons' background placeholders with <img srcset> elements or set inline background-image to your optimized thumbnails.
-       - For each project card, update the data-project JSON with real values (title, role, skills, timeline, outcome).
-       - Add real project case study text and images inside the modal template or change modal to link to a dedicated project page if you prefer separate pages.
-       - Optimize images (resize + WebP) and host them in your repo. Use srcset for responsive images.
-       - Run a Lighthouse audit after replacing images and text to catch accessibility or performance issues.
-  -->
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><a href="https://myemail.constantcontact.com/The-Latest-Alumni-News.html?soid=1102261747125&aid=563urbETfJk">August 2024</a></li>
+      <li><a href="https://conta.cc/40jiXUe">October 2024</a></li>
+      <li><a href="https://conta.cc/3E8CcH9">January 2025</a></li>
+    </ul>
+
+    <div class="project-media">
+      <img src="https://i.imgur.com/O9x34LA.png" alt="Screenshot of Alma College alumni newsletter"/>
+    </div>
+  </div>
+
+  <!-- WRITING & COMMUNICATION -->
+  <div class="project-box">
+    <h2>📰 Print + Editorial Strategy</h2>
+    <h3>Writing and Communication</h3>
+
+    <p>In addition to serving as editor of The Tartan, I am the primary writer for the college’s internal and external communications — including email messages, social media posts, blog articles, and press releases. I have written hundreds of pieces for diverse audiences, focusing on readability and engagement while applying best practices in search engine optimization to attract new visitors to the college website.</p>
+
+    <p>Before joining Alma, I spent a decade as a news reporter and editor in Mid-Michigan, covering stories on business and economic development that earned multiple professional awards. During this time, I also designed print layouts using Adobe InDesign, crowdsourced using social media and shot photos to accompany my reporting — experience that continues to inform my approach to storytelling and visual communication.</p>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><a href="https://www.alma.edu/news/fafsa-has-opened-what-students-need-to-know/">Blog</a></li>
+      <li><a href="https://www.alma.edu/news/dr-joseph-odenwald-almas-14th-president-alma-college/">Press Release</a></li>
+      <li><a href="https://phoenix-filestack.s3.us-east-1.amazonaws.com/MfyUONKhRlS3Qd7TNqo8_recycling.pdf">News Article</a></li>
+    </ul>
+
+    <div class="project-media">
+      <img src="https://i.imgur.com/Wy6XXxG.jpeg" alt="Writing and communication"/>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
