@@ -148,11 +148,29 @@ section p {
   height: 170px;
 }
 
-/* ===== NEW ADDITION (ONLY CHANGE #1) ===== */
-.match-height {
-  height: 210px !important; /* Adjust as needed */
+/* === ALIGN MEDIA BOTTOMS === */
+.projects {
+  align-items: stretch;
 }
-/* ======================================= */
+
+.project-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-media {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-media img,
+.project-media iframe {
+  max-height: 210px; /* adjust if needed */
+  object-fit: cover;
+}
+/* ===================================== */
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -271,11 +289,7 @@ Beyond my professional work, I am actively engaged in my community in Alma, Mich
 
     <div class="project-media">
       <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
-
-      <!-- ===== CHANGE #2: CLASS ADDED HERE ===== -->
       <iframe class="match-height" src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
-      <!-- ======================================== -->
-
     </div>
   </div>
 
