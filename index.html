@@ -60,6 +60,23 @@ section p {
   color: #374151;
 }
 
+/* About section layout */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.about-text {
+  flex: 1 1 500px;
+}
+.about-photo {
+  width: 150px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 /* Portfolio divider bar */
 .portfolio-divider {
   max-width: 1100px;
@@ -155,6 +172,15 @@ section p {
 /* ======================================= */
 
 /* Responsive adjustments */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-photo {
+    width: 120px;
+  }
+}
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -184,10 +210,12 @@ section p {
 
 <!-- ABOUT -->
 <section class="about">
-  <h2>About</h2>
-  <p>I am a versatile communications and marketing professional with 15 years of experience spanning higher education and news media environments. I have a proven track record of leading complex projects that combine storytelling, digital strategy, and public relations to support publications, website initiatives, social media, and internal communications.
-<p>
-Beyond my professional work, I am actively engaged in my community in Alma, Michigan, where I live with my wife, Autumn, and our two cats. I serve on the Alma Planning Commission and the advisory board of Families Against Narcotics, contributing to local initiatives that strengthen our community. In my free time, I enjoy baking, cooking, watching movies and sports, and writing — pursuits that allow me to blend creativity with attention to detail, both personally and professionally. I bring the same creativity, attention to detail, and passion for storytelling to my work, and I look forward to crafting communications that resonate and connect with diverse audiences.</p>
+  <div class="about-text">
+    <h2>About</h2>
+    <p>I am a versatile communications and marketing professional with 15 years of experience spanning higher education and news media environments. I have a proven track record of leading complex projects that combine storytelling, digital strategy, and public relations to support publications, website initiatives, social media, and internal communications.</p>
+    <p>Beyond my professional work, I am actively engaged in my community in Alma, Michigan, where I live with my wife, Autumn, and our two cats. I serve on the Alma Planning Commission and the advisory board of Families Against Narcotics, contributing to local initiatives that strengthen our community. In my free time, I enjoy baking, cooking, watching movies and sports, and writing — pursuits that allow me to blend creativity with attention to detail, both personally and professionally. I bring the same creativity, attention to detail, and passion for storytelling to my work, and I look forward to crafting communications that resonate and connect with diverse audiences.</p>
+  </div>
+  <img class="about-photo" src="https://i.imgur.com/jUNUlFm.jpg" alt="Tim Rath mugshot" />
 </section>
 
 <!-- RESUME -->
@@ -271,11 +299,7 @@ Beyond my professional work, I am actively engaged in my community in Alma, Mich
 
     <div class="project-media">
       <img src="https://i.imgur.com/Duh8xwZ.jpeg" alt="Cover of The Tartan Fall 2025 issue"/>
-
-      <!-- ===== CHANGE #2: CLASS ADDED HERE ===== -->
       <iframe class="match-height" src="https://www.youtube.com/embed/mqXPerCA2Qc" allowfullscreen></iframe>
-      <!-- ======================================== -->
-
     </div>
   </div>
 
