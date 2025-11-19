@@ -45,16 +45,16 @@ header .contact-bar a:hover {
 /* Main sections */
 section {
   max-width: 900px;
-  margin: 2rem auto;  /* original */
+  margin: 1.5rem auto;  /* moderate spacing */
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-  padding: 2rem;
+  padding: 1.75rem; /* slightly reduced vertical padding */
 }
 
-/* REMOVE EXCESS WHITE SPACE — UPDATED SPACING */
+/* Reduced spacing specifically between stacked sections */
 section + section {
-  margin-top: 1rem !important;  /* tighter spacing */
+  margin-top: 1.25rem;
 }
 
 section h2 {
@@ -81,7 +81,7 @@ section p {
 /* Portfolio divider bar */
 .portfolio-divider {
   max-width: 1100px;
-  margin: 2rem auto 1rem;
+  margin: 2.2rem auto 1.25rem; /* tightened top/bottom */
   background-color: #1f2937;
   padding: 0.9rem 0;
   text-align: center;
@@ -102,7 +102,7 @@ section p {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5rem;
   max-width: 1100px;
-  margin: 1rem auto 3rem;
+  margin: 1.25rem auto 3rem; /* slightly reduced */
   padding: 0 1rem;
 }
 
@@ -243,7 +243,6 @@ section p {
 
 <!-- PORTFOLIO GRID -->
 <div class="projects">
-
   <!-- VIDEO + SOCIAL -->
   <div class="project-box">
     <h2>🎥 Video + Social Media</h2>
