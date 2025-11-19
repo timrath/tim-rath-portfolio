@@ -45,12 +45,18 @@ header .contact-bar a:hover {
 /* Main sections */
 section {
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 2rem auto;  /* original */
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.05);
   padding: 2rem;
 }
+
+/* REMOVE EXCESS WHITE SPACE — UPDATED SPACING */
+section + section {
+  margin-top: 1rem !important;  /* tighter spacing */
+}
+
 section h2 {
   font-size: 1.6rem;
   color: #1f2937;
@@ -160,11 +166,10 @@ section p {
   height: 170px;
 }
 
-/* ===== NEW ADDITION (ONLY CHANGE #1) ===== */
+/* Match-height override */
 .match-height {
-  height: 210px !important; /* Adjust as needed */
+  height: 210px !important;
 }
-/* ======================================= */
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
